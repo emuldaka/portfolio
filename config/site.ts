@@ -1,18 +1,17 @@
 export const siteConfig = {
   // Personal Information
-  name: "Your Name",
+  name: "Elis Muldaka",
   title: "Fullstack JavaScript Engineer",
-  bio: "Passionate fullstack developer specializing in React, Node.js, and modern web technologies. Building scalable applications with clean code and best practices.",
-  email: "your.email@example.com",
-  
+  bio: "Passionate fullstack developer specializing in React, TypeScript, and modern web technologies. Building scalable applications with clean code and best practices.",
+  email: "emuldaka [at] gmail [dot] com",
+
   // Social Links
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    twitter: "https://twitter.com/yourusername",
-    email: "mailto:your.email@example.com",
+    github: "https://github.com/emuldaka",
+    linkedin: "https://linkedin.com/in/elis-muldaka-7a880633a",
+    email: "mailto:emuldaka@gmail.com",
   },
-  
+
   // Navigation
   navLinks: [
     { name: "Home", href: "#home" },
@@ -21,29 +20,32 @@ export const siteConfig = {
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ],
-  
+
   // Experience Timeline
   experience: [
     {
       title: "Senior Fullstack Developer",
       company: "Tech Company X",
       period: "2022 - Present",
-      description: "Leading development of scalable web applications using React, Next.js, and Node.js.",
+      description:
+        "Leading development of scalable web applications using React, Next.js, and Node.js.",
     },
     {
       title: "Fullstack Developer",
       company: "Startup Y",
       period: "2020 - 2022",
-      description: "Built and maintained multiple client-facing applications with React and Express.",
+      description:
+        "Built and maintained multiple client-facing applications with React and Express.",
     },
     {
       title: "Frontend Developer",
       company: "Agency Z",
       period: "2018 - 2020",
-      description: "Developed responsive web interfaces and collaborated with design teams.",
+      description:
+        "Developed responsive web interfaces and collaborated with design teams.",
     },
   ],
-  
+
   // Education
   education: [
     {
@@ -52,7 +54,7 @@ export const siteConfig = {
       period: "2014 - 2018",
     },
   ],
-  
+
   // Skills
   skills: {
     core: [
@@ -77,14 +79,16 @@ export const siteConfig = {
       { name: "AWS", level: 75 },
     ],
   },
-  
+
   // Projects
   projects: [
     {
       id: 1,
       title: "E-commerce Platform",
-      description: "A full-featured e-commerce application with shopping cart, payment integration, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+      description:
+        "A full-featured e-commerce application with shopping cart, payment integration, and admin dashboard.",
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
       tech: ["React", "Next.js", "Node.js", "MongoDB", "Stripe"],
       github: "https://github.com/yourusername/ecommerce",
       demo: "https://ecommerce-demo.vercel.app",
@@ -93,8 +97,10 @@ export const siteConfig = {
     {
       id: 2,
       title: "Task Management App",
-      description: "A collaborative task management tool with real-time updates, drag-and-drop, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+      description:
+        "A collaborative task management tool with real-time updates, drag-and-drop, and team collaboration features.",
+      image:
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
       tech: ["React", "TypeScript", "Express", "Socket.io", "PostgreSQL"],
       github: "https://github.com/yourusername/task-manager",
       demo: "https://taskmanager-demo.vercel.app",
@@ -103,8 +109,10 @@ export const siteConfig = {
     {
       id: 3,
       title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media metrics with data visualization and reporting features.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      description:
+        "Analytics dashboard for social media metrics with data visualization and reporting features.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "Chart.js"],
       github: "https://github.com/yourusername/social-dashboard",
       demo: "https://dashboard-demo.vercel.app",
@@ -113,19 +121,22 @@ export const siteConfig = {
     {
       id: 4,
       title: "REST API Service",
-      description: "Scalable REST API with authentication, rate limiting, and comprehensive documentation.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      description:
+        "Scalable REST API with authentication, rate limiting, and comprehensive documentation.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
       tech: ["Node.js", "Express", "MongoDB", "JWT", "Swagger"],
       github: "https://github.com/yourusername/api-service",
       demo: "https://api-docs.vercel.app",
       category: "backend",
     },
   ],
-  
+
   // SEO
   seo: {
     title: "Your Name - Fullstack JavaScript Engineer",
-    description: "Portfolio of a fullstack JavaScript developer specializing in React, Node.js, and modern web technologies.",
+    description:
+      "Portfolio of a fullstack JavaScript developer specializing in React, Node.js, and modern web technologies.",
     url: "https://yourportfolio.vercel.app",
     image: "https://yourportfolio.vercel.app/og-image.jpg",
   },
