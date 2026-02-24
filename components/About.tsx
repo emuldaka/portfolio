@@ -35,7 +35,7 @@ export default function About() {
           >
             <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop"
+                src="/portriatCentered.jpg"
                 alt="Profile"
                 fill
                 className="object-cover"
@@ -56,9 +56,12 @@ export default function About() {
               {siteConfig.bio}
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              I moved to the U.S. from Albania as a kid, which meant learning to
+              adapt quickly to a new language, culture, and environment. I’m a
+              proud dad of two who’s learned how to balance life between family,
+              work, and personal growth. When I’m not spending time with my
+              kids, you’ll usually find me gaming, staying active through
+              sports, or sharpening my programming skills late at night.
             </p>
           </motion.div>
         </div>
@@ -108,7 +111,10 @@ export default function About() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: (siteConfig.experience.length + index) * 0.1 }}
+                transition={{
+                  duration: 0.6,
+                  delay: (siteConfig.experience.length + index) * 0.1,
+                }}
                 className="relative pl-8 border-l-2 border-purple-600 dark:border-purple-400"
               >
                 <div className="absolute -left-2 top-0 w-4 h-4 bg-purple-600 dark:bg-purple-400 rounded-full"></div>
