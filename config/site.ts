@@ -24,15 +24,7 @@ export const siteConfig = {
   ],
 
   // Experience Timeline
-  experience: [
-    {
-      title: "Senior Fullstack Developer",
-      company: "Tech Company X",
-      period: "2022 - Present",
-      description:
-        "Leading development of scalable web applications using React, Next.js, and Node.js.",
-    },
-  ],
+  experience: [],
 
   // Education
   education: [
