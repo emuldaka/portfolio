@@ -1,3 +1,68 @@
+type Certificate = {
+  title: string;
+  issuer: string;
+  link: string;
+  image?: string;
+};
+
+const certificates: Certificate[] = [
+  {
+    title: "CI/CD with GitHub Actions, Docker and TypeScript",
+    issuer: "https://www.boot.dev/",
+    link: "https://www.boot.dev/certificates/1cdaf2a4-6b5c-4197-a7e7-5f9aac0354d3",
+  },
+  {
+    title: "Learn Docker",
+    issuer: "https://www.boot.dev/",
+    link: "https://www.boot.dev/certificates/82139c0f-d803-4a6b-b987-8b07ac58aa98",
+  },
+  {
+    title: "Learn SQL",
+    issuer: "https://www.boot.dev/",
+    link: "https://www.boot.dev/certificates/1296bda3-47f5-40b3-a88c-e756d19deddd",
+  },
+  {
+    title: "TypeScript",
+    issuer: "https://www.boot.dev/",
+    link: "https://www.boot.dev/certificates/9e1a76e8-4ab1-44fb-afac-85655705e30c",
+  },
+  {
+    title: "Learn Linux",
+    issuer: "https://www.boot.dev/",
+    link: "https://www.boot.dev/certificates/7c6d80f7-9e9b-46b0-81ab-58a022358bc8",
+  },
+  {
+    title: "Learn Git",
+    issuer: "https://www.boot.dev/",
+    link: "https://www.boot.dev/certificates/35f8cd5b-b1fd-45ff-a796-acf7d9e4750e",
+  },
+  {
+    title: "Learn Python",
+    issuer: "https://www.boot.dev/",
+    link: "https://www.boot.dev/certificates/36923fbb-720f-461e-adbb-a82b6258effe",
+  },
+  {
+    title: "Learn HTTP Clients in TypeScript",
+    issuer: "https://www.boot.dev/",
+    link: "https://www.boot.dev/certificates/e9fa2301-d967-47cb-bf93-c8986042a231",
+  },
+  {
+    title: "Learn JavaScript",
+    issuer: "https://www.boot.dev/",
+    link: "https://www.boot.dev/certificates/12cbd728-e345-4e34-b088-21102ca9e180",
+  },
+  {
+    title: "Foundational C# with Microsoft",
+    issuer: "https://www.freecodecamp.org/",
+    link: "https://www.freecodecamp.org/certification/fccf80e1700-44dd-4ed8-bdf7-ff57101aaccf/foundational-c-sharp-with-microsoft",
+  },
+  {
+    title: "JavaScript Algorithms and Data Structures",
+    issuer: "https://www.freecodecamp.org/",
+    link: "https://www.freecodecamp.org/certification/fccf80e1700-44dd-4ed8-bdf7-ff57101aaccf/javascript-algorithms-and-data-structures",
+  },
+] satisfies Certificate[];
+
 export const siteConfig = {
   // Personal Information
   name: "Elis Muldaka",
@@ -34,63 +99,7 @@ export const siteConfig = {
   ],
 
   // Certifications — optional per cert: add "image": "/certificates/your-image.png" to show a badge image
-  certificates: [
-    {
-      title: "CI/CD with GitHub Actions, Docker and TypeScript",
-      issuer: "https://www.boot.dev/",
-      link: "https://www.boot.dev/certificates/1cdaf2a4-6b5c-4197-a7e7-5f9aac0354d3",
-    },
-    {
-      title: "Learn Docker",
-      issuer: "https://www.boot.dev/",
-      link: "https://www.boot.dev/certificates/82139c0f-d803-4a6b-b987-8b07ac58aa98",
-    },
-    {
-      title: "Learn SQL",
-      issuer: "https://www.boot.dev/",
-      link: "https://www.boot.dev/certificates/1296bda3-47f5-40b3-a88c-e756d19deddd",
-    },
-    {
-      title: "TypeScript",
-      issuer: "https://www.boot.dev/",
-      link: "https://www.boot.dev/certificates/9e1a76e8-4ab1-44fb-afac-85655705e30c",
-    },
-    {
-      title: "Learn Linux",
-      issuer: "https://www.boot.dev/",
-      link: "https://www.boot.dev/certificates/7c6d80f7-9e9b-46b0-81ab-58a022358bc8",
-    },
-    {
-      title: "Learn Git",
-      issuer: "https://www.boot.dev/",
-      link: "https://www.boot.dev/certificates/35f8cd5b-b1fd-45ff-a796-acf7d9e4750e",
-    },
-    {
-      title: "Learn Python",
-      issuer: "https://www.boot.dev/",
-      link: "https://www.boot.dev/certificates/36923fbb-720f-461e-adbb-a82b6258effe",
-    },
-    {
-      title: "Learn HTTP Clients in TypeScript",
-      issuer: "https://www.boot.dev/",
-      link: "https://www.boot.dev/certificates/e9fa2301-d967-47cb-bf93-c8986042a231",
-    },
-    {
-      title: "Learn JavaScript",
-      issuer: "https://www.boot.dev/",
-      link: "https://www.boot.dev/certificates/12cbd728-e345-4e34-b088-21102ca9e180",
-    },
-    {
-      title: "Foundational C# with Microsoft",
-      issuer: "https://www.freecodecamp.org/",
-      link: "https://www.freecodecamp.org/certification/fccf80e1700-44dd-4ed8-bdf7-ff57101aaccf/foundational-c-sharp-with-microsoft",
-    },
-    {
-      title: "JavaScript Algorithms and Data Structures",
-      issuer: "https://www.freecodecamp.org/",
-      link: "https://www.freecodecamp.org/certification/fccf80e1700-44dd-4ed8-bdf7-ff57101aaccf/javascript-algorithms-and-data-structures",
-    },
-  ],
+  certificates,
 
   // Skills
   skills: {

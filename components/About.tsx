@@ -3,10 +3,7 @@
 import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
-import {
-  AcademicCapIcon,
-  CheckBadgeIcon,
-} from "@heroicons/react/24/solid";
+import { AcademicCapIcon, CheckBadgeIcon } from "@heroicons/react/24/solid";
 
 export default function About() {
   return (
@@ -149,7 +146,7 @@ export default function About() {
 
                 <div className="p-6 flex gap-4">
                   {/* Optional certificate image */}
-                  {"image" in cert && cert.image ? (
+                  {cert.image ? (
                     <div className="shrink-0 w-20 h-20 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 ring-2 ring-amber-400/30">
                       <Image
                         src={cert.image}
@@ -169,11 +166,15 @@ export default function About() {
                       {cert.title}
                     </h4>
                     <p className="text-sm text-amber-600 dark:text-amber-400 font-medium mt-1 truncate">
-                      {cert.issuer.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                      {cert.issuer
+                        .replace(/^https?:\/\//, "")
+                        .replace(/\/$/, "")}
                     </p>
                     <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 flex items-center gap-1">
                       <span>View verified certificate</span>
-                      <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                      <span className="group-hover:translate-x-0.5 transition-transform">
+                        →
+                      </span>
                     </p>
                   </div>
                 </div>
