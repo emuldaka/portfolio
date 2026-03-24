@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Your Name - Fullstack JavaScript Engineer",
-    template: "%s | Your Name",
+    default: "Elis Muldaka Portfolio",
+    template: "%s | Elis Muldaka Portfolio",
   },
   description: "Portfolio of a fullstack JavaScript developer specializing in React, Node.js, and modern web technologies.",
   keywords: ["fullstack developer", "JavaScript", "React", "Node.js", "Next.js", "portfolio"],
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://yourportfolio.vercel.app",
-    title: "Your Name - Fullstack JavaScript Engineer",
+    title: "Elis Muldaka Portfolio",
     description: "Portfolio of a fullstack JavaScript developer specializing in React, Node.js, and modern web technologies.",
-    siteName: "Your Name Portfolio",
+    siteName: "Elis Muldaka Portfolio",
     images: [
       {
         url: "https://yourportfolio.vercel.app/og-image.jpg",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Name - Fullstack JavaScript Engineer",
+    title: "Elis Muldaka Portfolio",
     description: "Portfolio of a fullstack JavaScript developer specializing in React, Node.js, and modern web technologies.",
     images: ["https://yourportfolio.vercel.app/og-image.jpg"],
   },
