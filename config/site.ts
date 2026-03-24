@@ -1,5 +1,3 @@
-import { Certificate } from "crypto";
-
 export const siteConfig = {
   // Personal Information
   name: "Elis Muldaka",
@@ -35,7 +33,7 @@ export const siteConfig = {
     },
   ],
 
-  //Certifications
+  // Certifications — optional per cert: add "image": "/certificates/your-image.png" to show a badge image
   certificates: [
     {
       title: "CI/CD with GitHub Actions, Docker and TypeScript",
@@ -97,66 +95,34 @@ export const siteConfig = {
   // Skills
   skills: {
     frontend: [
-      { name: "React", level: 95 },
-      { name: "JavaScript/TypeScript", level: 88 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "CSS/HTML", level: 85 },
+      { name: "React", level: 65 },
+      { name: "JavaScript/TypeScript", level: 80 },
+      { name: "Tailwind CSS", level: 50 },
+      { name: "CSS/HTML", level: 80 },
     ],
     backend: [
-      { name: "Node.js", level: 90 },
-      { name: "Express", level: 88 },
-      { name: "MongoDB", level: 85 },
-      { name: "PostgreSQL", level: 82 },
+      { name: "Node.js", level: 75 },
+      { name: "Express", level: 75 },
+      { name: "MongoDB", level: 65 },
+      { name: "PostgreSQL", level: 50 },
     ],
     tools: [
-      { name: "Git", level: 90 },
-      { name: "Docker", level: 80 },
-      { name: "Linux", level: 75 },
+      { name: "Git", level: 80 },
+      { name: "Docker", level: 40 },
+      { name: "Linux", level: 65 },
     ],
     core: [
-      { name: "Python", level: 92 },
-      { name: "C#", level: 90 },
-      { name: "Next.js", level: 88 },
-      { name: "CI/CD Actions", level: 90 },
-      { name: "HTTPS Clients", level: 90 },
+      { name: "Python", level: 35 },
+      { name: "C#", level: 35 },
+      { name: "Next.js", level: 60 },
+      { name: "CI/CD Actions", level: 35 },
+      { name: "HTTPS Clients", level: 70 },
     ],
   },
 
   // Projects
   projects: [
-    {
-      id: 1,
-      title: "Calendar App",
-      description:
-        "Built full-stack app with React frontend, Express backend, MongoDB, and secure authentication for event management. Designed interactive UI with monthly grids, event counts, add/edit/delete features, and date picker.",
-      image: "/CalendarCapture.PNG",
-      tech: ["React", "Next.js", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com/emuldaka/Calendar",
-      demo: "https://emuldaka.site",
-      category: "fullstack",
-    },
-    {
-      id: 2,
-      title: "OmniCalc",
-      description:
-        "Developed calculator/converter using Next.js, TypeScript, Tailwind CSS for math, science, physics, chemistry, and finance tools. Integrated duplicatable calculators, unit converters, graphing, and specialized hubs (e.g., periodic table, kinematics).",
-      image: "/OmniCalcCapture.PNG",
-      tech: ["React", "TypeScript", "Express", "Socket.io", "PostgreSQL"],
-      github: "https://github.com/emuldaka/OmniCalc",
-      demo: "https://emuldaka.github.io/OmniCalc/",
-      category: "fullstack",
-    },
-    {
-      id: 3,
-      title: "React Memory Game",
-      description:
-        "Created a matching game with React/JavaScript for card flips, pair logic, and state management. Implemented scoring on moves/time with reset and visual feedback for engagement. Added customizable settings, emphasizing type-safety and responsive design",
-      image: "/MemoryGameCapture.PNG",
-      tech: ["React", "TypeScript", "Node.js", "FirebaseDB"],
-      github: "https://github.com/emuldaka/ReactMemoryGame",
-      demo: "https://tab-games.github.io/ReactMemoryGame/",
-      category: "fullstack",
-    },
+    // Freelance
     {
       id: 4,
       title: "Norwood Home Solutions",
@@ -175,9 +141,71 @@ export const siteConfig = {
         "https://github.com/emuldaka/NorwoodHomeSolutions-BusinessWebsite",
       demo: "https://www.norwoodhomesolutions.com/",
       category: "frontend",
+      type: "freelance",
+    },
+    // Personal projects
+    {
+      id: 1,
+      title: "Calendar App",
+      description:
+        "Built full-stack app with React frontend, Express backend, MongoDB, and secure authentication for event management. Designed interactive UI with monthly grids, event counts, add/edit/delete features, and date picker.",
+      image: "/CalendarCapture.PNG",
+      tech: ["React", "Next.js", "Node.js", "MongoDB", "Stripe"],
+      github: "https://github.com/emuldaka/Calendar",
+      demo: "https://emuldaka.site",
+      category: "fullstack",
+      type: "personal",
+    },
+    {
+      id: 2,
+      title: "OmniCalc",
+      description:
+        "Developed calculator/converter using Next.js, TypeScript, Tailwind CSS for math, science, physics, chemistry, and finance tools. Integrated duplicatable calculators, unit converters, graphing, and specialized hubs (e.g., periodic table, kinematics).",
+      image: "/OmniCalcCapture.PNG",
+      tech: ["React", "TypeScript", "Express", "Socket.io", "PostgreSQL"],
+      github: "https://github.com/emuldaka/OmniCalc",
+      demo: "https://emuldaka.github.io/OmniCalc/",
+      category: "fullstack",
+      type: "personal",
+    },
+    {
+      id: 3,
+      title: "Amortization Calculator",
+      description:
+        "An Amortization Calculator that helps users estimate loan payments over time by breaking down each payment into principal and interest, while showing how the remaining balance decreases throughout the loan term and allowing additions of one time payments.",
+      image: "/LoanSageCapture.PNG",
+      tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      github: "https://github.com/emuldaka/LoanSage-AmortizationCalculator",
+      demo: "https://emuldaka.github.io/LoanSage-AmortizationCalculator/",
+      category: "frontend",
+      type: "personal",
+    },
+    {
+      id: 4,
+      title: "React Memory Game",
+      description:
+        "Created a matching game with React/JavaScript for card flips, pair logic, and state management. Implemented scoring on moves/time with reset and visual feedback for engagement. Added customizable settings, emphasizing type-safety and responsive design",
+      image: "/MemoryGameCapture.PNG",
+      tech: ["React", "TypeScript", "Node.js", "FirebaseDB"],
+      github: "https://github.com/emuldaka/ReactMemoryGame",
+      demo: "https://tab-games.github.io/ReactMemoryGame/",
+      category: "fullstack",
+      type: "personal",
     },
     {
       id: 5,
+      title: "E-Commerce",
+      description:
+        "Frontend only of e-commerce site that displays catalog of products with images, names, and prices. Supports filtering by categories, price ranges and wishlist. Can add or remove from cart and calculate cost dynamically",
+      image: "/ecommerceCapture.PNG",
+      tech: ["JavaScript", "CSS", "HTML"],
+      github: "https://github.com/emuldaka/e-commerce",
+      demo: "https://emuldaka.github.io/e-commerce/",
+      category: "frontend",
+      type: "personal",
+    },
+    {
+      id: 6,
       title: "RolePlayingGame",
       description:
         "Created a website for a client's business using Next.js, TypeScript, and Tailwind CSS. The website is a simple one-page website with a header, a main section, and a footer. Contains Services, Gallery and Testimonials sections. Uses FormSpree for contact form submission.",
@@ -186,9 +214,10 @@ export const siteConfig = {
       github: "https://github.com/emuldaka/RolePlayingWebGame",
       demo: "https://emuldaka.github.io/RolePlayingWebGame/",
       category: "frontend",
+      type: "personal",
     },
     {
-      id: 6,
+      id: 7,
       title: "Calorie Calculator",
       description:
         "Created a website for a client's business using Next.js, TypeScript, and Tailwind CSS. The website is a simple one-page website with a header, a main section, and a footer. Contains Services, Gallery and Testimonials sections. Uses FormSpree for contact form submission.",
@@ -197,6 +226,7 @@ export const siteConfig = {
       github: "https://github.com/emuldaka/CalorieCounter",
       demo: "https://emuldaka.github.io/CalorieCounter/",
       category: "frontend",
+      type: "personal",
     },
   ],
 

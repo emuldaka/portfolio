@@ -1,56 +1,22 @@
 "use client";
 
-import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
+import { useForm, ValidationError } from "@formspree/react";
 import {
   EnvelopeIcon,
   MapPinIcon,
 } from "@heroicons/react/24/outline";
 import { siteConfig } from "@/config/site";
 
+const formId = "xqedneng";
+
+const inputClass =
+  "w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white";
+const labelClass =
+  "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2";
+
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    // Simulate form submission (replace with actual API call)
-    // For production, use Formspree, SendGrid, or your own API
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
-      // Example: Replace with actual form submission
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
-      
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const [state, handleSubmit] = useForm(formId);
 
   return (
     <section
@@ -70,7 +36,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
           <p className="text-lg text-gray-700 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part
+            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part
             of your visions.
           </p>
         </motion.div>
@@ -86,10 +52,10 @@ export default function Contact() {
           >
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Let's Connect
+                Let&apos;s Connect
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8">
-                Feel free to reach out if you're looking for a developer, have a question, or just
+                Feel free to reach out if you&apos;re looking for a developer, have a question, or just
                 want to connect.
               </p>
             </div>
@@ -154,89 +120,87 @@ export default function Contact() {
             onSubmit={handleSubmit}
             className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg"
           >
-            <div className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            {state.succeeded ? (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-8"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
+                <p className="text-green-600 dark:text-green-400 text-lg font-medium">
+                  Thanks for your message! I&apos;ll get back to you soon.
+                </p>
+              </motion.div>
+            ) : (
+              <div className="space-y-6">
+                <div>
+                  <label htmlFor="name" className={labelClass}>
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className={inputClass}
+                  />
+                </div>
 
-              {submitStatus === "success" && (
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-green-600 dark:text-green-400 text-center"
-                >
-                  Message sent successfully!
-                </motion.p>
-              )}
+                <div>
+                  <label htmlFor="email" className={labelClass}>
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className={inputClass}
+                  />
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                    className="text-red-600 dark:text-red-400 text-sm mt-1"
+                  />
+                </div>
 
-              {submitStatus === "error" && (
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-red-600 dark:text-red-400 text-center"
+                <div>
+                  <label htmlFor="message" className={labelClass}>
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={6}
+                    className={`${inputClass} resize-none`}
+                  />
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                    className="text-red-600 dark:text-red-400 text-sm mt-1"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Failed to send message. Please try again.
-                </motion.p>
-              )}
-            </div>
+                  {state.submitting ? "Sending..." : "Send Message"}
+                </button>
+
+                {state.errors && Array.isArray(state.errors) && state.errors.length > 0 && (
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="text-red-600 dark:text-red-400 text-center text-sm"
+                  >
+                    Something went wrong. Please check the fields above.
+                  </motion.p>
+                )}
+              </div>
+            )}
           </motion.form>
         </div>
       </div>

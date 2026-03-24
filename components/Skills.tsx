@@ -16,15 +16,30 @@ const skillIcons = {
   tools: WrenchScrewdriverIcon,
 };
 
+const getSkillLevelLabel = (level: number) => {
+  if (level < 40) return "Beginner";
+  if (level < 65) return "Intermediate";
+  if (level < 85) return "Advanced";
+  return "Expert";
+};
+
 export default function Skills() {
-  const skillCategories = [
-    { title: "Core Technologies", key: "core" as const, color: "blue" },
-    { title: "Frontend", key: "frontend" as const, color: "purple" },
-    { title: "Backend", key: "backend" as const, color: "green" },
-    { title: "Tools & DevOps", key: "tools" as const, color: "orange" },
+  type ColorKey = "blue" | "purple" | "green" | "orange";
+  const skillCategories: {
+    title: string;
+    key: keyof typeof skillIcons;
+    color: ColorKey;
+  }[] = [
+    { title: "Core Technologies", key: "core", color: "blue" },
+    { title: "Frontend", key: "frontend", color: "purple" },
+    { title: "Backend", key: "backend", color: "green" },
+    { title: "Tools & DevOps", key: "tools", color: "orange" },
   ];
 
-  const colorClasses = {
+  const colorClasses: Record<
+    ColorKey,
+    { bg: string; text: string; progress: string }
+  > = {
     blue: {
       bg: "bg-blue-100 dark:bg-blue-900/30",
       text: "text-blue-600 dark:text-blue-400",
@@ -98,7 +113,7 @@ export default function Skills() {
                           {skill.name}
                         </span>
                         <span className="text-gray-600 dark:text-gray-400 text-sm">
-                          {skill.level}%
+                          {getSkillLevelLabel(skill.level)}
                         </span>
                       </div>
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
@@ -106,7 +121,10 @@ export default function Skills() {
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.level}%` }}
                           viewport={{ once: true }}
-                          transition={{ duration: 1, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
+                          transition={{
+                            duration: 1,
+                            delay: categoryIndex * 0.1 + skillIndex * 0.05,
+                          }}
                           className={`h-2.5 rounded-full ${colors.progress}`}
                         />
                       </div>
